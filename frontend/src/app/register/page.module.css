@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+}
+
+.container input {
+    line-height: 25px;
+    padding-left: 5px;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    Link.primary:hover {
+        background: var(--button-background-hover);
+        border-color: transparent;
+    }
+    
+    Link.link:hover {
+        color: var(--button-background);
+    }
+}
+
+/* gonna fix this later lol -Nikka */
+@media (max-width: 600px) {
+    .main {
+        padding: 48px 24px;
+    }
+    
+    .intro {
+        gap: 16px;
+    }
+    
+    .intro h1 {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -1.92px;
+    }
+}

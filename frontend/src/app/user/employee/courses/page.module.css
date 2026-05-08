@@ -1,0 +1,84 @@
+.main {
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 800px;
+    gap: 16px;
+    font-size: 18px;
+}
+
+.enrollCourse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+    height: 50px;
+    width: fit-content;
+    padding: 0 34px;
+    font-weight: 500;
+    font-size: 30px;
+    background: var(--inner-background);
+    color: var(--button-text);
+    gap: 8px;
+}
+
+.filter {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 75%;
+    background-color: #171717;
+}
+
+.overlay {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--inner-background);
+    padding: 25px;
+    gap: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+}
+
+p.overlayTitle {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+input.courseCode {
+    line-height: 25px;
+    padding-left: 5px;
+    width: 200px;
+}
+
+button.exitOverlay {
+    cursor: pointer;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+

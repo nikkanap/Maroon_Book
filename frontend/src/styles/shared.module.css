@@ -1,0 +1,56 @@
+.imageBackground {
+    min-height: 100dvh;
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.centeredDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--inner-background);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.registerLoginLink {
+    font-style: italic;
+    font-size: 11px;
+    margin: auto;
+}
+
+.rowButtons,
+.colButtons {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 5px;
+    width: fit-content;
+}
+
+.colButtons {
+    flex-direction: column;
+}
+
+.rowButtons {
+    flex-direction: row;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    .registerLoginLink:hover {
+        color: var(--button-primary-background);
+    }
+}
+
+.errorText {
+    font-size: 12px;
+    color: red;
+    font-style: italic;
+}

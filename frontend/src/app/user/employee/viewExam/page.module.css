@@ -1,0 +1,241 @@
+.main {
+    flex-direction: column;
+    gap: 24px;
+}
+
+.examHeader {
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--inner-background);
+    padding-bottom: 20px;
+}
+
+.examTitle {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: var(--text-primary);
+}
+
+.examInfo {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.questionsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.questionContainer {
+    background-color: var(--inner-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: box-shadow 0.2s ease;
+}
+
+.questionContainer:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.questionHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.questionNumber {
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.questionType {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    width: fit-content;
+    color: white;
+}
+
+.multipleChoice {
+    background-color: #3b82f6;
+}
+
+.shortAnswer {
+    background-color: #10b981;
+}
+
+.paragraph {
+    background-color: #f59e0b;
+}
+
+.questionText {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.wordLimit {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0;
+    padding: 4px 0;
+    font-style: italic;
+}
+
+.optionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.optionLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.optionLabel:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.radio {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #3b82f6;
+}
+
+.optionText {
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text-primary);
+    background-color: var(--background);
+    resize: vertical;
+    min-height: 100px;
+    transition: border-color 0.2s ease;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.paragraphTextarea {
+    min-height: 150px;
+}
+
+.noContent {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 40px 20px;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 800px;
+    gap: 16px;
+    font-size: 18px;
+}
+
+.enrollCourse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+    height: 50px;
+    width: fit-content;
+    padding: 0 34px;
+    font-weight: 500;
+    font-size: 30px;
+    background: var(--inner-background);
+    color: var(--button-text);
+    gap: 8px;
+}
+
+.filter {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 75%;
+    background-color: #171717;
+}
+
+.overlay {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--inner-background);
+    padding: 25px;
+    gap: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+}
+
+p.overlayTitle {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+input.courseCode {
+    line-height: 25px;
+    padding-left: 5px;
+    width: 200px;
+}
+
+button.exitOverlay {
+    cursor: pointer;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+

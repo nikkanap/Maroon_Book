@@ -1,0 +1,26 @@
+/*nav part of the html*/
+.nav {
+    --background: #f2f2f2;
+    --button-primary: #7B1113;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    background-color:var(--background);
+    font-size: 20px;
+}
+
+.logo {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.navButtons{
+    display: flex;
+    gap: 24px;
+    margin: auto;
+    margin-right: 10px;
+}

@@ -1,0 +1,66 @@
+/* main part of the html */
+.main {
+    flex-direction: row;
+}
+
+.leftDiv, 
+.rightDiv {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 5px;
+    padding: 20px;
+    background-color: var(--inner-background);
+    border-radius: 10px;
+    text-wrap: balance;
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.leftDiv p.title,  
+.rightDiv p.title {
+    font-size: 22px;
+    font-weight: 600;
+    text-wrap: balance;
+    color: var(--inner-text);
+}
+
+.leftDiv label {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.rightDiv Link {
+    display: flex;
+    flex-direction: row;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    .rightDiv Link:hover {
+        color: var(--inner-text);
+        border-color: transparent;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        padding: 48px 24px;
+    }
+    
+    .innerDiv {
+        gap: 16px;
+    }
+    
+    .innerDiv h1 {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -1.92px;
+    }
+}

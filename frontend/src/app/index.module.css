@@ -1,0 +1,115 @@
+.page {
+    --background: #f2f2f2;
+    
+    --text-primary: #171717;
+    --text-secondary: #ffffff;
+    
+    --button-background: #7B1113;
+    --button-text: #f2f2f2;
+    
+    --button-background-hover: #581718;
+    
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: var(--font-geist-sans);
+    background-color: var(--background);
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+}
+
+/* main part of the html */
+.main {
+    width: 100%;
+    min-height: 90vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 30px;
+
+    h1 {
+        max-width: 800px;
+        width: 100%;
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 48px;
+        letter-spacing: -2.4px;
+        text-wrap: balance;
+        color: var(--text-primary);
+    }
+
+    p {
+        max-width: 800px;
+        width: 100%;
+        font-size: 23px;
+        line-height: 32px;
+        text-wrap: balance;
+        color: var(--text-primary);
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 800px;
+    gap: 16px;
+    font-size: 18px;
+
+    Link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        padding: 0 34px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        transition: 0.2s;
+        cursor: pointer;
+        width: fit-content;
+        font-weight: 500;
+    }
+}
+
+Link.primary {
+    background: var(--button-background);
+    color: var(--button-text);
+    gap: 8px;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    Link.primary:hover {
+        background: var(--button-background-hover);
+        border-color: transparent;
+    }
+}
+
+/* gonna fix this later lol -Nikka */
+@media (max-width: 600px) {
+    .main {
+        padding: 48px 24px;
+    }
+    
+    .intro {
+        gap: 16px;
+    }
+    
+    .intro h1 {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -1.92px;
+    }
+}

@@ -1,0 +1,140 @@
+:root {
+    --background: #f2f2f2;
+    --gray-background: rgb(193, 193, 193);
+    --foreground: #171717;
+    --inner-background: #ffffff;
+    
+    --white-text: #ffffff;
+    --title-text: #7B1113;
+    
+    --button-primary-background: #7B1113;
+    --button-primary-text: #ffffff;
+    --button-primary-background-hover: #581718;
+    
+    --button-secondary-text: #656565;
+    --button-secondary-background: #494949;
+    --button-secondary-background-hover: #bebebe;
+    
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: var(--font-geist-sans);
+    background-color: var(--background);
+}
+
+.main {
+    width: 100%;
+    min-height: 90vh;
+    max-width: 100%;
+}
+
+.title22px {
+    font-size: 22px;
+    font-weight: 600;
+    text-wrap: balance;
+    color: var(--title-text);
+}
+
+.title17px {
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    text-wrap: balance;
+    color: var(--foreground);
+}
+
+.innerTitle {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    text-wrap: balance;
+    text-align: center;
+    color: var(--title-text);
+    margin-top: 5px;
+}
+
+.primaryButton {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* optional, only if you need centering */
+    width: fit-content;
+    padding: 10px 34px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+    background: var(--button-primary-background);
+    color: var(--button-primary-text);
+    gap: 8px;
+}
+
+.secondaryButton {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* optional, only if you need centering */
+    width: fit-content;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: 0.2s;
+    cursor: pointer;
+    background: var(--button-secondary-background);
+    color: var(--button-primary-text);
+    gap: 8px;
+}
+
+hr {
+    background-color: var(--foreground);
+    width: 100%;
+    height: 2px;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    .primaryButton:hover {
+        background: var(--button-primary-background-hover);
+        border-color: transparent;
+    }
+
+    .secondaryButton:hover {
+        background: var(--button-primary-background-hover);
+        border-color: transparent;
+    }
+}
+
+body {
+    min-height: 100dvh;
+}
